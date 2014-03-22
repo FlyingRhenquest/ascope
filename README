@@ -1,0 +1,19 @@
+This is my modification of ascope.el by Staton Sun on the
+EmacsWiki. This adds the ability to trace all callers of a function
+all the way up to the top level of your C program. Mainly so if you
+change that function, you can see what you need to recompile.
+
+To use:
+
+1) Build your cscope indices (Go to source directory and type cscope -qbR)
+
+2) M-X ascope-init and give it your source directory where your cscope
+indices are.
+
+3) M-X ascope-trace-back and give it a function name.
+
+Or
+
+(ascope-trace-back "function-name")
+
+It will create new buffer and print the call tree in it.
